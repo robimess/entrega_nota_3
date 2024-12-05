@@ -1,10 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Tab1Page } from './tab1.page';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('Tab1Page', () => {
   let component: Tab1Page;
   let fixture: ComponentFixture<Tab1Page>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [Tab1Page],
+      imports: [HttpClientTestingModule],
+    }).compileComponents();
+  })
 
   beforeEach(async () => {
     fixture = TestBed.createComponent(Tab1Page);
